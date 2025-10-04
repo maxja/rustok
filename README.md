@@ -10,6 +10,10 @@
 
 * [Rust in Action](https://www.manning.com/books/rust-in-action) by Tim McNamara
 
+## Original code from the book
+
+* [rust-in-action](https://github.com/rust-in-action/code) on github
+
 ## Project Structure
 
 It's a multi-package project, which stores all progress as a separate packages, stored in `chapters` folder.
