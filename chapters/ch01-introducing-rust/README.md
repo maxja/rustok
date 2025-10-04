@@ -47,6 +47,7 @@ Introduce `print_penguin_profiles` function (from ch 1.5).
 15. `Ok` is a one of validation-capturer, `Err` is an another one. It allows to skip ill-formatted input.
 16. `#[allow(dead_code)]` is an attribute that allows the compiler to ignore the warning about unused code.
 17. `cargo run` will compile and run the program with debug information. And `cargo run --release` will compile and run the program with optimizations enabled, ignoring `cfg!(debug_assertions)` block.
+18. Comments can be done using `//` for single-line comments and `/* */` for multi-line comments.
 
 ## Questions
 
