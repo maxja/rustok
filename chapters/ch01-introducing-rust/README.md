@@ -11,8 +11,9 @@ cargo new [project_name]
 Will Create a new Rust project from a template with the given name, and puts it in a directory with the same name. New file `main.rs` is created with a basic template, with a `main` function that prints "Hello, world!" to the console.
 
 1. `fn` is a prefix for function declaration in Rust.
-2. Exclamation mark `!` is a macro invocation.
-3. Language respects curly braces `{}` and semicolons `;`.
+2. `main` is an entry point for the program.
+3. Exclamation mark `!` is a macro invocation.
+4. Language respects curly braces `{}` and semicolons `;`.
 
 > The author of the book suggested to create another project, but I will change created previously.
 
@@ -26,6 +27,26 @@ Will create a new function, which would print not only default "Hello, world!", 
 6. Iterator can be produced from array via `.iter()` method.
 7. `&` is a reference prefix in Rust. It is used to create a reference to a value, which allows you to access the value without taking ownership of it (only for reading).
 8. `println!` is a macro that prints formatted text to the console, where `{}` is a placeholder for a value that will be inserted into the string.
+
+Introduce `print_penguin_profiles` function (from ch 1.5).
+
+1. `\` backslash character after the open double quotes (`"`) is used to disable newline characters in the multi-string literal. This is useful when you want to include a newline character in a string literal without actually starting a new line in the code.
+2. String variable have a builtin method `.lines()` which returns an iterator over the lines of the string.
+3. To get index of each line, you can use `.enumerate()` method on the iterator returned by `.lines()`. And for accepts a closure that takes two arguments: the index and the line itself.
+4. `if` statement doesn't need to have parentheses surrounding the condition.
+5. `continue` keyword is used to skip the rest of the loop body and move on to the next iteration. Assume that `break` keyword is used to exit the loop prematurely.
+6. Variable declaration can specify the type of the variable, after the colons `:` following the name.
+7. `Vec` is a collection type, represents a dynamic array of elements of the same type. Type of the elements specified in triangle brackets `<T>`.
+8. `_` is a infer type specifier, which allows the compiler to infer the type of the variable based on assigned value.
+9. Functions in Rust can be used as first-class citizens.
+10. `cfg!` is a macro to check the configuration of the build environment.
+11. `eprintln!` is a macro that prints formatted error messages to the standard error stream, as opposed to `println!` which prints to the standard output stream.
+12. Elements of the vector can be accessed using index in square brackets.
+13. Variable declaration-assignment can happen in condition block.
+14. Builtin method `.parse()` specifies the type of the parsed value in the angle brackets `<T>`.
+15. `Ok` is a one of validation-capturer, `Err` is an another one. It allows to skip ill-formatted input.
+16. `#[allow(dead_code)]` is an attribute that allows the compiler to ignore the warning about unused code.
+17. `cargo run` will compile and run the program with debug information. And `cargo run --release` will compile and run the program with optimizations enabled, ignoring `cfg!(debug_assertions)` block.
 
 ## Questions
 
