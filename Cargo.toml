@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "chapters/ch01-introducing-rust"
+]
+
+resolver = "3"
