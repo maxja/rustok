@@ -57,6 +57,8 @@ Introduce `print_penguin_profiles` function (from ch 1.5).
 
 ### Safety
 
+#### Memory Safety
+
 Introduce enumeration type with fixed list of variants.
 
 1. `#[derive(Debug)]` allowed print macros to access represenation of enumeration.

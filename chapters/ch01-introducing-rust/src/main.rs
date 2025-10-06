@@ -57,12 +57,16 @@ enum Cereal {
     Buckwheat,
 }
 
-fn main() {
-    // greet_world();
-    // print_penguin_profiles();
-
+#[allow(dead_code)]
+fn memory_safety() {
     let mut grains: Vec<Cereal> = vec![];
     grains.push(Cereal::Oatmeal);
     drop(grains);
     println!("{:?}", grains);
+}
+
+fn main() {
+    // greet_world();
+    // print_penguin_profiles();
+    // memory_safety();
 }
