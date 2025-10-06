@@ -67,6 +67,14 @@ Introduce enumeration type with fixed list of variants.
 4. To manually remove variable and it's value `drop` procedure is used.
 5. Programm would not compile, as compiler detects attempt to late access to the variable in `println!` macro after it was moved.
 
+#### Thread Safety
+
+Introduce function with threads management, which would lead to race.
+
+1. To be able to use library function `use` is used to import it.
+2. `thread::spawn` is used to create a new thread, and accepts higher-order function as an argument.
+3. As compiler doesn't control the order of execution of threads, it's possible to have race conditions.
+
 ## Questions
 
 * How to point cargo to different template?

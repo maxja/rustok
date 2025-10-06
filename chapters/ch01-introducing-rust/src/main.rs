@@ -1,3 +1,5 @@
+use std::thread;
+
 #[allow(dead_code)]
 fn greet_world() {
     println!("Hello, world!");
@@ -47,6 +49,7 @@ fn print_penguin_profiles() {
     }
 }
 
+/*
 #[derive(Debug)]
 enum Cereal {
     Oatmeal,
@@ -64,9 +67,23 @@ fn memory_safety() {
     drop(grains);
     println!("{:?}", grains);
 }
+*/
+
+fn thread_safety() {
+    let mut data = 100;
+    thread::spawn(|| {
+        data = 500;
+    });
+    thread::spawn(|| {
+        data = 1_000;
+    });
+    println!("{}", data);
+}
 
 fn main() {
     // greet_world();
     // print_penguin_profiles();
     // memory_safety();
+
+    thread_safety();
 }
