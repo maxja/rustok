@@ -79,3 +79,7 @@ Introduce function with threads management, which would lead to race.
 
 * How to point cargo to different template?
 * Is it possible to switch it to different codepage for defined string literals?
+* How to handle errors in Rust?
+* How to assign value to an enum's values?
+* Is `vec!` also macro?
+* How to do threading in Rust properly?

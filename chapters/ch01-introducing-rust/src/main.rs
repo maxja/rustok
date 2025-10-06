@@ -69,6 +69,7 @@ fn memory_safety() {
 }
 */
 
+/*
 fn thread_safety() {
     let mut data = 100;
     thread::spawn(|| {
@@ -79,11 +80,11 @@ fn thread_safety() {
     });
     println!("{}", data);
 }
+*/
 
 fn main() {
     // greet_world();
     // print_penguin_profiles();
     // memory_safety();
-
-    thread_safety();
+    // thread_safety();
 }
