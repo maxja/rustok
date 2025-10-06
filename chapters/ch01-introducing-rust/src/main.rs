@@ -1,4 +1,4 @@
-use std::thread;
+// use std::{thread};
 
 #[allow(dead_code)]
 fn greet_world() {
@@ -82,9 +82,17 @@ fn thread_safety() {
 }
 */
 
+fn buffer_safety() {
+    let fruit = vec!['_', '_', '_'];
+    let buffer_overflow = fruit[4];
+    assert_eq!(buffer_overflow, '_');
+}
+
 fn main() {
     // greet_world();
     // print_penguin_profiles();
     // memory_safety();
     // thread_safety();
+
+    buffer_safety();
 }

@@ -75,6 +75,14 @@ Introduce function with threads management, which would lead to race.
 2. `thread::spawn` is used to create a new thread, and accepts higher-order function as an argument.
 3. As compiler doesn't control the order of execution of threads, it's possible to have race conditions.
 
+#### Buffer Overflow
+
+Introduce function with buffer management, which would lead to overflow.
+
+1. Programm will be compiled!
+2. Runtime will detects out of bounds access.
+
+
 ## Questions
 
 * How to point cargo to different template?
