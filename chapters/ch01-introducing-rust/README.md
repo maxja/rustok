@@ -2,6 +2,8 @@
 
 ## Create project using Cargo
 
+### Initialize
+
 Cargo is Rust's package manager and build tool. Actually, it's a multitool that helps you manage dependencies, build your project, and run tests.
 
 ```bash
@@ -17,6 +19,8 @@ Will Create a new Rust project from a template with the given name, and puts it 
 
 > The author of the book suggested to create another project, but I will change created previously.
 
+### Explore basic blocks
+
 Will create a new function, which would print not only default "Hello, world!", but also same phrase on different other languages, to confirm that rust using utf-8 encoding. By default?
 
 1. `let` is a prefix for variable declaration that can be assigned and initialized right away.
@@ -27,6 +31,8 @@ Will create a new function, which would print not only default "Hello, world!", 
 6. Iterator can be produced from array via `.iter()` method.
 7. `&` is a reference prefix in Rust. It is used to create a reference to a value, which allows you to access the value without taking ownership of it (only for reading).
 8. `println!` is a macro that prints formatted text to the console, where `{}` is a placeholder for a value that will be inserted into the string.
+
+### Explore condition checking and result capturer
 
 Introduce `print_penguin_profiles` function (from ch 1.5).
 
@@ -48,6 +54,16 @@ Introduce `print_penguin_profiles` function (from ch 1.5).
 16. `#[allow(dead_code)]` is an attribute that allows the compiler to ignore the warning about unused code.
 17. `cargo run` will compile and run the program with debug information. And `cargo run --release` will compile and run the program with optimizations enabled, ignoring `cfg!(debug_assertions)` block.
 18. Comments can be done using `//` for single-line comments and `/* */` for multi-line comments.
+
+### Safety
+
+Introduce enumeration type with fixed list of variants.
+
+1. `#[derive(Debug)]` allowed print macros to access represenation of enumeration.
+2. Initialize an empty vector and specify it as mutable, with `mut` declaration prefix.
+3. Add new element to vector using `.push()` method.
+4. To manually remove variable and it's value `drop` procedure is used.
+5. Programm would not compile, as compiler detects attempt to late access to the variable in `println!` macro after it was moved.
 
 ## Questions
 

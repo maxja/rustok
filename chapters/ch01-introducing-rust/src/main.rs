@@ -15,6 +15,7 @@ fn greet_world() {
     }
 }
 
+#[allow(dead_code)]
 fn print_penguin_profiles() {
     let penguin_data = "\
         common name,length (cm),weight (kg),sex,age (years)
@@ -46,8 +47,22 @@ fn print_penguin_profiles() {
     }
 }
 
+#[derive(Debug)]
+enum Cereal {
+    Oatmeal,
+    Wheat,
+    Rice,
+    Corn,
+    Barley,
+    Buckwheat,
+}
+
 fn main() {
     // greet_world();
+    // print_penguin_profiles();
 
-    print_penguin_profiles();
+    let mut grains: Vec<Cereal> = vec![];
+    grains.push(Cereal::Oatmeal);
+    drop(grains);
+    println!("{:?}", grains);
 }
