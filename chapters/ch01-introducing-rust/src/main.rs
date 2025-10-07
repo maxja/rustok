@@ -1,6 +1,6 @@
 // use std::{thread};
 
-#[allow(dead_code)]
+/*
 fn greet_world() {
     println!("Hello, world!");
     let southern_germany = "Grüß Gott!";
@@ -16,8 +16,9 @@ fn greet_world() {
         println!("{}", &region);
     }
 }
+*/
 
-#[allow(dead_code)]
+/*
 fn print_penguin_profiles() {
     let penguin_data = "\
         common name,length (cm),weight (kg),sex,age (years)
@@ -48,6 +49,7 @@ fn print_penguin_profiles() {
         }
     }
 }
+ */
 
 /*
 #[derive(Debug)]
@@ -60,7 +62,6 @@ enum Cereal {
     Buckwheat,
 }
 
-#[allow(dead_code)]
 fn memory_safety() {
     let mut grains: Vec<Cereal> = vec![];
     grains.push(Cereal::Oatmeal);
@@ -82,10 +83,21 @@ fn thread_safety() {
 }
 */
 
+/*
 fn buffer_safety() {
     let fruit = vec!['_', '_', '_'];
     let buffer_overflow = fruit[4];
     assert_eq!(buffer_overflow, '_');
+}
+*/
+
+fn inloop_mut_safety() {
+    let mut letters = vec!["a", "b", "c"];
+
+    for letter in letters {
+        println!("{}", letter);
+        letters.push(letter.clone());
+    }
 }
 
 fn main() {
@@ -93,6 +105,7 @@ fn main() {
     // print_penguin_profiles();
     // memory_safety();
     // thread_safety();
-
-    buffer_safety();
+    // buffer_safety();
+    //
+    inloop_mut_safety();
 }
