@@ -86,6 +86,12 @@ Introduce function with buffer management, which would lead to overflow.
 
 Introduce function to demonstrate in loop modification with vector modification
 
+#### Wrong Equal Safety
+
+Introduce function to demonstrate wrong equal sign comparison.
+
+1. Compiler expects boolean return type as operation result, but got void type value.
+
 ## Questions
 
 * How to point cargo to different template?

@@ -91,12 +91,22 @@ fn buffer_safety() {
 }
 */
 
+/*
 fn inloop_mut_safety() {
     let mut letters = vec!["a", "b", "c"];
 
     for letter in letters {
         println!("{}", letter);
         letters.push(letter.clone());
+    }
+}
+*/
+
+fn wrong_equal_safety() {
+    let a = 10;
+
+    if a = 10 {
+        println!("a equals ten")
     }
 }
 
@@ -106,6 +116,7 @@ fn main() {
     // memory_safety();
     // thread_safety();
     // buffer_safety();
+    // inloop_mut_safety();
     //
-    inloop_mut_safety();
+    wrong_equal_safety();
 }
