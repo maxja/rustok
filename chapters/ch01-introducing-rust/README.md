@@ -90,7 +90,14 @@ Introduce function to demonstrate in loop modification with vector modification
 
 Introduce function to demonstrate wrong equal sign comparison.
 
-1. Compiler expects boolean return type as operation result, but got void type value called unit, and unit has no value.
+1. Compiler expects boolean as a return type of an operation result, but got void type value called unit, and unit has no value.
+
+#### In Memory Storing Control
+
+1. Assigning a literal number to variable, put it on Stack.
+2. Assigning a boxed `Box` value to variable, put it on Heap.
+3. Boxed variable can be wrapped in Ref Counter `Rc`.
+4. Number can be wrapped in Atomic counter `Arc`, and be access protected via `Mutex`.
 
 ## Questions
 
@@ -100,3 +107,5 @@ Introduce function to demonstrate wrong equal sign comparison.
 * How to assign value to an enum's values?
 * Is `vec!` also macro?
 * How to do threading in Rust properly?
+* How Rust decides on memory allocation?
+* How Rust assigns lifetimes?

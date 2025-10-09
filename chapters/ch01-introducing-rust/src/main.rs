@@ -102,12 +102,26 @@ fn inloop_mut_safety() {
 }
 */
 
+/*
 fn wrong_equal_safety() {
     let a = 10;
 
     if a = 10 {
         println!("a equals ten")
     }
+}
+*/
+
+use std::rc::Rc;
+use std::sync::{Arc, Mutex};
+
+fn multiple_way_to_store() {
+    let a = 10;
+    let b = Box::new(20);
+    let c = Rc::new(Box::new(30));
+    let d = Arc::new(Mutex::new(40));
+
+    println!("a: {:?}, b: {:?}, c: {:?}, d: {:?}", a, b, c, d);
 }
 
 fn main() {
@@ -117,6 +131,7 @@ fn main() {
     // thread_safety();
     // buffer_safety();
     // inloop_mut_safety();
+    // wrong_equal_safety();
     //
-    wrong_equal_safety();
+    multiple_way_to_store();
 }
