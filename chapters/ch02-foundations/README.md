@@ -9,3 +9,17 @@
 5. Function can have auto-return as a last statement declared in a block;
 6. Auto-return statement can't end with a semicolon `;`;
 7. Double quoted strings used generally for strings and single quoted characters for characters;
+
+## Numbers
+
+1. Rust uses infix notation;
+2. Operands should be same type, there is no implicit conversion;
+3. Specific numeric type can have it's own set of methods, like `.round()` for floating point numbers;
+4. Floating point types started with `f` prefix and integer with `i`;
+5. Number can be formatted in print macro via dot specifier, like `{:.4}` or `{:.4e}`;
+
+
+## Questions
+
+1. There is an operator overload, can I do mine?
+2. What is the other options to format numbers?
