@@ -19,7 +19,7 @@ Will Create a new Rust project from a template with the given name, and puts it 
 
 > The author of the book suggested to create another project, but I will change created previously.
 
-### Explore basic blocks
+## Explore basic blocks
 
 Will create a new function, which would print not only default "Hello, world!", but also same phrase on different other languages, to confirm that rust using utf-8 encoding. By default?
 
@@ -32,7 +32,7 @@ Will create a new function, which would print not only default "Hello, world!", 
 7. `&` is a reference prefix in Rust. It is used to create a reference to a value, which allows you to access the value without taking ownership of it (only for reading).
 8. `println!` is a macro that prints formatted text to the console, where `{}` is a placeholder for a value that will be inserted into the string.
 
-### Explore condition checking and result capturer
+## Explore condition checking and result capturer
 
 Introduce `print_penguin_profiles` function (from ch 1.5).
 
@@ -55,9 +55,9 @@ Introduce `print_penguin_profiles` function (from ch 1.5).
 17. `cargo run` will compile and run the program with debug information. And `cargo run --release` will compile and run the program with optimizations enabled, ignoring `cfg!(debug_assertions)` block.
 18. Comments can be done using `//` for single-line comments and `/* */` for multi-line comments.
 
-### Safety
+## Safety
 
-#### Memory Safety
+### Memory Safety
 
 Introduce enumeration type with fixed list of variants.
 
@@ -67,7 +67,7 @@ Introduce enumeration type with fixed list of variants.
 4. To manually remove variable and it's value `drop` procedure is used.
 5. Programm would not compile, as compiler detects attempt to late access to the variable in `println!` macro after it was moved.
 
-#### Thread Safety
+### Thread Safety
 
 Introduce function with threads management, which would lead to race.
 
@@ -75,24 +75,24 @@ Introduce function with threads management, which would lead to race.
 2. `thread::spawn` is used to create a new thread, and accepts closure.
 3. As compiler doesn't control the order of execution of threads, it's possible to have race conditions.
 
-#### Buffer Overflow
+### Buffer Overflow
 
 Introduce function with buffer management, which would lead to overflow.
 
 1. Programm will be compiled!
 2. Runtime will detects out of bounds access.
 
-#### In-loop Modification
+### In-loop Modification
 
 Introduce function to demonstrate in loop modification with vector modification
 
-#### Wrong Equal Safety
+### Wrong Equal Safety
 
 Introduce function to demonstrate wrong equal sign comparison.
 
 1. Compiler expects boolean as a return type of an operation result, but got void type value called unit, and unit has no value.
 
-#### In Memory Storing Control
+### In Memory Storing Control
 
 1. Assigning a literal number to variable, put it on Stack.
 2. Assigning a boxed `Box` value to variable, put it on Heap.

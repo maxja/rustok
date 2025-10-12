@@ -1,6 +1,7 @@
 [workspace]
 members = [
-    "chapters/ch01-introducing-rust"
+    "chapters/ch01-introducing-rust",
+    "chapters/ch02-foundations"
 ]
 
 resolver = "3"

@@ -3,5 +3,9 @@
 version = 4
 
 [[package]]
-name = "ch01-03-helloworld"
+name = "ch01-helloworld"
+version = "0.1.0"
+
+[[package]]
+name = "ch02-foundations"
 version = "0.1.0"
