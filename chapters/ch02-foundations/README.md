@@ -24,8 +24,10 @@
 
 1. Only variables of same type can be compared;
 2. Values can be explicitly converted using `as` keyword, using `from` method on designed type, or using `try_into` method of a value type;
+    * to use `try_into` trait required to be imported from `std::convert`;
 
 ## Questions
 
 1. There is an operator overload, can I do mine?
 2. What is the other options to format numbers?
+3. `unwrap` is a method on Result type, which unwrap the value?
