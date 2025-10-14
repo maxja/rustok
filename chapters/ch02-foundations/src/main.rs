@@ -1,3 +1,5 @@
+use std::convert::TryInto;
+
 fn add(i: i32, j: i32) -> i32 {
     i + j
 }
@@ -32,4 +34,12 @@ fn main() {
         "{} in base 16: {:x},\n {} in base 8: {:o},\n {} base 2: {:b}",
         three, three, three_hundred, three_hundred, thirty, thirty
     );
+
+    let unsigned = 42u16;
+    let signed = 42i32;
+    let unsigned_: i32 = unsigned.try_into().unwrap();
+
+    if i32::from(unsigned) == signed && signed == (unsigned as i32) && unsigned_ == signed {
+        println!("unsigned is equal to signed");
+    }
 }

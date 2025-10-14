@@ -20,6 +20,11 @@
 6. Numbers with base different then `10` can be specified using `0x` for hexadecimal, `0o` for octal, and `0b` for binary;
 7. Numbers can be printed with different base, like `{:x}` for hexadecimal, `{:o}` for octal, and `{:b}` for binary;
 
+## Numbers Comparison
+
+1. Only variables of same type can be compared;
+2. Values can be explicitly converted using `as` keyword, using `from` method on designed type, or using `try_into` method of a value type;
+
 ## Questions
 
 1. There is an operator overload, can I do mine?
