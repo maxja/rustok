@@ -17,7 +17,8 @@
 3. Specific numeric type can have it's own set of methods, like `.round()` for floating point numbers;
 4. Floating point types started with `f` prefix and integer with `i`;
 5. Number can be formatted in print macro via dot specifier, like `{:.4}` or `{:.4e}`;
-
+6. Numbers with base different then `10` can be specified using `0x` for hexadecimal, `0o` for octal, and `0b` for binary;
+7. Numbers can be printed with different base, like `{:x}` for hexadecimal, `{:o}` for octal, and `{:b}` for binary;
 
 ## Questions
 
